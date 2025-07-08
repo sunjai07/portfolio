@@ -1,0 +1,213 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-image: url("images/beach.png");
+  background-repeat: no-repeat;       /* Prevent tiling */
+  background-size: cover;             /* Make it stretch to fill */
+  background-position: center;        /* Center the image */
+  padding: 40px 20px;
+  text-align: center; /* Optional: better contrast on a dark image */
+  color: black;
+text-shadow: 1px 1px 3px white;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #555;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+form button {
+  padding: 10px;
+  background: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #444;
+}
+
+/* Gear icon fixed position and spinning */
+.gear-fixed {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  width: 100px;
+  height: 100px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.gear {
+  width: 100px;
+  height: 100px;
+  background: url('pngimg.com - gear_PNG29.png') no-repeat center center;
+  background-size: contain;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode header {
+  background: #222;
+  color: #eee;
+}
+
+body.dark-mode nav {
+  background: #333;
+}
+
+body.dark-mode nav a {
+  color: #ccc;
+}
+
+body.dark-mode nav a:hover {
+  background: green;
+}
+
+body.dark-mode .project {
+  background: #333;
+  border-left-color: #0f9d58;
+}
+
+body.dark-mode footer {
+  background: #111;
+  color: #ccc;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+  background: #222;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark-mode form button {
+  background: #0f9d58;
+  color: white;
+}
+
+body.dark-mode form button:hover {
+  background: #0c7a3f;
+}
+/* Multicolour text effect */
+.multicolour-text {
+  background: linear-gradient(
+    90deg,
+    #ff4d4d,
+    #ffcc00,
+    #33cc33,
+    #3399ff,
+    #cc33ff
+  );
+  background-size: 300% 300%;
+  animation: textflow 3s linear infinite;
+
+  /* Required for gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Standard syntax for compatibility */
+  background-clip: text;
+  color: transparent;
+
+  /* fallback for unsupported browsers */
+  display: inline-block;
+}
+.header {
+ display: flex;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.pic {
+  visibility: hidden;
+  position:relative;
+  left:50px;
+  width: 60px;
+  height: 60px;
+  margin-top: -100px; /* Moves it slightly above header */
+  margin-right: 10px;
+}
+
+
+
